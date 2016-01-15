@@ -17,8 +17,6 @@ makeCacheMatrix <- function(x = matrix()) {
              setmatinv = setmatinv,
              getmatinv = getmatinv) 
 }
-
-
 ## Write a short comment describing this function
 ## This method check whether inverse of matrix exists in cache
 ## If it is in cache it retreives and return from cache
@@ -34,7 +32,6 @@ cacheSolve <- function(x, ...) {
         m <- solve(data, ...)               
         x$setmatinv(m)     
 }
-
 ##These are the test cases of above methods
 matx <- matrix(runif(6,2,50),2,2)
 matxinvcache <- makeCacheMatrix(test)
